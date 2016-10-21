@@ -8,5 +8,11 @@
 # "11\n7\n18\n" to standard output.
 
 def sum_difference_product
-  # your code goes here
+  print "Type two integers separated by a space:"
+  integers = gets.chomp
+  arr = integers.split(" ").map {|s| s.to_i}
+  a = arr[0]
+  b = arr[1]
+  puts "#{a+b}\n#{a-b}\n#{a*b}"
+   
 end
