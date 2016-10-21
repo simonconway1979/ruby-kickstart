@@ -9,11 +9,33 @@
 
 def odds_and_evens(string, return_odds)
 
-if return_odds == false  
-p string.gsub(/([bdfhjlnprtvqz])/,"")  
+  if return_odds == true
+
+  output = ""
+  string.length.times {|x|
+  current_char = string[x]
+  output << current_char if x.odd?}
+
+  return output
+  
 else
-p string.gsub(/([acegikmoqsuwy])/,"")  
+
+  output = ""
+  string.length.times {|x|
+  current_char = string[x]
+  output << current_char if x.even?}
+
+  return output
+end
+
+#p  odd = string[x].odd?}
+  
+#if return_odds == false  
+#p string.gsub(/([bdfhjlnprtvqz])/,"")  
+#else
+#p string.gsub(/([acegikmoqsuwy])/,"")  
   
 end
-end
+
+odds_and_evens("112233445566778899", true)
 
