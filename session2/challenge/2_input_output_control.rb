@@ -19,7 +19,20 @@
 # and when you think it is correct, you can test it with  $ rake 2:2
 
 def hi_hi_goodbye
-  # your code here
+ 
+ 
+  print "Give me a number higher than 0:"
+  x = gets.chomp
+  
+  if x == "bye"
+    print "goodbye"
+  
+  else  
+  number = x.to_i
+  number.times {|x| print "hi "}
+  hi_hi_goodbye
+  
+end
 end
 
 
